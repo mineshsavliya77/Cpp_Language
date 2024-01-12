@@ -1,43 +1,91 @@
 #include<iostream>
 using namespace  std;
 
+  class student
+ {
+    private:
 
-class Test
-{
+    int admno;
+    char sname[10]; // --> length
+    float eng, math, sci;
+    float total;
+
+
+    float ctotal(){
+
+        total = eng + math + sci;
+        return total;
+
+    }
+
+    public:
     
-private:
+    void Takedata(){ 
+        cout << "Enter the admno : "<<endl;
+        cin >> admno;
 
-int admno;
-char sname;
-float eng,math,sci;
-float totel;
+        cout << "Enter the sname : "<<endl;
+        cin.get();  // --> sting spece print
+        cin.getline(sname,10);
 
+        cout << "Enter the marks of eng : "<<endl;
+        cin >> eng;
+
+        cout << "Enter the marks of math : "<<endl;
+        cin >> math;
+
+        cout << "Enter the marks of sci : "<<endl;
+        cin >> sci;
+
+        total = ctotal();
+
+    }
+
+    void Showdata(){
    
-public:
-    
-  void takedata(){
-    cout << "enter the admno" <<endl;
-    cin >> admno;
+    cout << "Enter the admno : " << admno <<endl;
+    cout << "Enter the sname : "<< sname <<endl;
+    cout << "Enter the marks of eng : " << eng <<endl;
+    cout << "Enter the marks of math : " << math <<endl;
+    cout << "Enter the marks of sci : " << sci <<endl;
+    cout << "Enter the total : " << total <<endl;
 
-    cout << "enter the sname" <<endl;
-    cin >> sname;
+    }
 
-    cout << "enter the eng" <<endl;
-    cin >> eng;
-
-    cout << "enter the math" <<endl;
-    cin >> math;
-
-    cout << "enter the sci" <<endl;
-    cin >> sci;
-
-    totel = eng = math = sci ;
-  }
-};
-
+   };
 
 
 int main(){
-   
-    
+    student t;
+
+    t.Takedata();
+    cout <<endl;
+    t.Showdata();
 }
+
+
+
+/*
+
+Enter the admno : 
+55
+Enter the sname : 
+minesh
+Enter the marks of eng : 
+55
+Enter the marks of math : 
+19
+Enter the marks of sci : 
+91
+
+Ans : 
+
+Enter the admno : 55
+Enter the sname : minesh
+Enter the marks of eng : 55
+Enter the marks of math : 19
+Enter the marks of sci : 91
+Enter the total : 165
+
+
+*/
