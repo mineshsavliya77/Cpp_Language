@@ -5,87 +5,60 @@ using namespace  std;
  {
     private:
 
-    int admno;
-    char sname[10]; // --> length
-    float eng, math, sci;
-    float total;
+    int bcode;
+    char bname[10]; 
+    float innings, notout, runs; 
+    float batavg; 
 
 
-    float ctotal(){
+    float calcavg(){ 
 
-        total = eng + math + sci;
-        return total;
+        batavg = innings + notout + runs; 
+        return batavg; 
 
-    }
+    } 
 
-    public:
+    public: 
     
-    void Takedata(){ 
-        cout << "Enter the admno : "<<endl;
-        cin >> admno;
+    void readdata(){ 
+        cout << "Enter the bcode : "<<endl;
+        cin >> bcode;
 
-        cout << "Enter the sname : "<<endl;
+        cout << "Enter the bname : "<<endl;
         cin.get();  // --> sting spece print
-        cin.getline(sname,10);
+        cin.getline(bname,10);
 
-        cout << "Enter the marks of eng : "<<endl;
-        cin >> eng;
+        cout << "Enter the marks of innings : " <<endl;
+        cin >> innings;
 
-        cout << "Enter the marks of math : "<<endl;
-        cin >> math;
+        cout << "Enter the marks of notout : " <<endl;
+        cin >> notout;
 
-        cout << "Enter the marks of sci : "<<endl;
-        cin >> sci;
+        cout << "Enter the marks of runs : " <<endl;
+        cin >> runs;
 
-        total = ctotal();
+        batavg = calcavg();
 
     }
 
-    void Showdata(){
+    void displaydata(){
    
-    cout << "Enter the admno : " << admno <<endl;
-    cout << "Enter the sname : "<< sname <<endl;
-    cout << "Enter the marks of eng : " << eng <<endl;
-    cout << "Enter the marks of math : " << math <<endl;
-    cout << "Enter the marks of sci : " << sci <<endl;
-    cout << "Enter the total : " << total <<endl;
+    cout << "Enter the bcode : " << bcode <<endl;
+    cout << "Enter the bname : "<< bname <<endl;
+    cout << "Enter the marks of innings : " << innings <<endl;
+    cout << "Enter the marks of notout : " << notout <<endl;
+    cout << "Enter the marks of runs : " << runs <<endl;
+    cout << "Enter the batavg : " << batavg <<endl;
 
     }
 
    };
 
 
-int main(){
+    int main(){
     student t;
 
-    t.Takedata();
+    t.readdata();
     cout <<endl;
-    t.Showdata();
+    t.displaydata();
 }
-
-
-
-/*
-
-Enter the admno : 
-55
-Enter the sname : 
-minesh
-Enter the marks of eng : 
-55
-Enter the marks of math : 
-19
-Enter the marks of sci : 
-91
-
-Ans : 
-
-Enter the admno : 55
-Enter the sname : minesh
-Enter the marks of eng : 55
-Enter the marks of math : 19
-Enter the marks of sci : 91
-Enter the total : 165
-
-
-*/
