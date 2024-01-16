@@ -54,11 +54,11 @@ using namespace  std;
 
    };
 
-
     int main(){
     student t;
 
     t.readdata();
     cout <<endl;
     t.displaydata();
+    
 }
