@@ -47,8 +47,7 @@ private:
 }
 
 };
-
-int main(){
+ main(){
     Test t;
     cout <<endl;
     t.SCHEDULE();
