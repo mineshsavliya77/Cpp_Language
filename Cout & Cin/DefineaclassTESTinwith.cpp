@@ -26,7 +26,7 @@ private:
         cout << "Enter the Description : "<<endl;
         cin.get();
         cin.getline(Description,100);
-
+ 
 
         cout << "Enter the No Candidate : "<<endl;
         cin >> NoCandidate;
